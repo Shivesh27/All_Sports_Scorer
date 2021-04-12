@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FootballScoring"
+    android:background="@drawable/foot_bg">
+
+    <TextView
+        android:id="@+id/football_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="FOOTBALL"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/primary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team A"
+        android:textSize="24sp"
+        android:id="@+id/football_team_a_1"
+        android:layout_marginTop="72dp"
+        android:layout_marginLeft="51dp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/football_title"
+        android:textColor="@color/primary"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/football_team_b_1"
+        android:layout_marginRight="51dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/football_title"
+        android:text="Team B"
+        android:layout_marginTop="72dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/primary"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/roboto_black"
+        android:text="V"
+        android:textColor="@color/f_green"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/football_title" />
+
+    <TextView
+        android:id="@+id/football_team_a_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:text="0"
+        android:textSize="144sp"
+        app:layout_constraintLeft_toLeftOf="@+id/football_team_a_1"
+        app:layout_constraintRight_toRightOf="@+id/football_team_a_1"
+        android:textColor="@color/primary"
+        app:layout_constraintTop_toBottomOf="@+id/football_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:text="0"
+        android:textSize="144sp"
+        app:layout_constraintTop_toBottomOf="@+id/football_title"
+        app:layout_constraintLeft_toLeftOf="@+id/football_team_b_1"
+        app:layout_constraintRight_toRightOf="@+id/football_team_b_1"
+        android:id="@+id/football_team_b_score"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:textColor="@color/primary"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:id="@+id/football_team_a_goal"
+        android:background="@drawable/add_goal"
+        app:layout_constraintTop_toBottomOf="@+id/football_team_a_score"
+        app:layout_constraintRight_toRightOf="@id/football_team_a_score"
+        app:layout_constraintLeft_toLeftOf="@id/football_team_a_score"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:id="@+id/football_team_b_goal"
+        android:background="@drawable/add_goal"
+        app:layout_constraintTop_toBottomOf="@+id/football_team_b_score"
+        app:layout_constraintRight_toRightOf="@id/football_team_b_score"
+        app:layout_constraintLeft_toLeftOf="@id/football_team_b_score"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/football_timer"
+        android:layout_marginBottom="100dp"
+        tools:text="90:00"
+        android:textSize="96sp"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fontFamily="@font/roboto_condensed_bold"
+        />
+
+    <Button
+        android:layout_width="174dp"
+        android:layout_height="66dp"
+        app:layout_constraintRight_toLeftOf="@+id/football_end"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/green_btn"
+        android:layout_marginBottom="35dp"
+        android:text="START"
+        android:id="@+id/football_start_pause"
+        />
+    <Button
+        android:layout_width="174dp"
+        android:layout_height="66dp"
+        android:id="@+id/football_end"
+        android:background="@drawable/red_btn"
+        android:text="END GAme"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/football_start_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

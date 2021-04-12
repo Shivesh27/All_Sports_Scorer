@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CricketMainActivity3"
+    android:background="@drawable/cric_bg">
+
+    <TextView
+        android:id="@+id/cricket_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="CRICKET"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/primary"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Team A"
+        android:id="@+id/cricket_btn_team_a"
+        android:background="@drawable/blue_btn"
+        app:layout_constraintTop_toBottomOf="@+id/cricket_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="40sp"
+        android:fontFamily="@font/roboto_medium"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Team B"
+        android:id="@+id/cricket_btn_team_B"
+        android:background="@drawable/blue_btn"
+        app:layout_constraintTop_toBottomOf="@+id/cricket_title"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="40sp"
+        android:fontFamily="@font/roboto_medium"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cricket_btn_team_a"
+        android:layout_marginTop="10dp"
+        android:text="Elect to: "
+        android:textSize="30dp"
+        android:fontFamily="@font/roboto_medium"
+        android:id="@+id/cricket_text"
+        android:textColor="@color/primary"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cricket_btn_bat"
+        app:layout_constraintTop_toBottomOf="@+id/cricket_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/blue_btn"
+        android:text="Bat"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="15dp"
+        android:onClick="performBat"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cricket_btn_bowl"
+        app:layout_constraintTop_toBottomOf="@+id/cricket_text"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/blue_btn"
+        android:text="BOWL"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="15dp"
+        android:onClick="performBowl"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

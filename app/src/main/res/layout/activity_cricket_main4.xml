@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cric_bg"
+    tools:context=".CricketMainActivity4">
+
+
+    <LinearLayout
+        android:id="@+id/cricket_linearScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cricket_txtTa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:text="@string/cricket_TeamA"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"/>
+
+        <TextView
+            android:id="@+id/cricket_txtScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/cricket_dot"
+            android:textSize="20sp"
+            android:textColor="@color/primary"/>
+
+        <TextView
+            android:id="@+id/cricket_txtDiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="20sp"
+            android:textColor="@color/primary"/>
+
+        <TextView
+            android:id="@+id/cricket_txtWicket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cricket_dot"
+            android:textSize="20sp"
+            android:textColor="@color/primary"/>
+
+        <TextView
+            android:id="@+id/cricket_txtOver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="@string/cricket_over"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"/>
+
+        <TextView
+            android:id="@+id/cricket_txtOverComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="0"
+            android:textSize="20sp"
+            android:textColor="@color/primary"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/cricket_rgScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cricket_linearScore"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+
+        <RadioButton
+            android:id="@+id/cricket_rbDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="onScore"
+            android:text="@string/cricket_dot" />
+
+        <RadioButton
+            android:id="@+id/cricket_rbSingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="onScore"
+            android:text="@string/cricket_single" />
+
+        <RadioButton
+            android:id="@+id/cricket_rbDouble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="onScore"
+            android:text="@string/cricket_two" />
+
+        <RadioButton
+            android:id="@+id/cricket_rbTrible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="onScore"
+            android:text="@string/cricket_trible" />
+
+        <RadioButton
+            android:id="@+id/cricket_rbFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="onScore"
+            android:text="@string/cricket_four" />
+
+        <RadioButton
+            android:id="@+id/cricket_rbSix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="onScore"
+            android:text="@string/cricket_six" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/cricket_LinearExtra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cricket_rgScore"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/cricket_btnWide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:onClick="wide"
+            android:text="wide"
+            android:textColor="@color/primary"
+            android:background="@drawable/blue_btn"/>
+
+        <Button
+            android:id="@+id/cricket_btnBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="by"
+            android:textColor="@color/primary"
+            android:background="@drawable/blue_btn"/>
+
+        <Button
+            android:id="@+id/cricket_btnNoBall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:onClick="noBall"
+            android:text="no ball"
+            android:textColor="@color/primary"
+            android:background="@drawable/blue_btn"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cricket_btnOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cricket_LinearExtra"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="25dp"
+        android:onClick="out"
+        android:text="out"
+        android:textColor="@color/primary"
+        android:background="@drawable/blue_btn"/>
+
+
+
+
+</RelativeLayout>
